@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <!-- Added Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 text-center">Train Scheduler</h1>
+                <p class="lead text-center">On time, every time</p>
+            </div>
+        </div>
+
+        <div id="trainTable" class="table-bordered">
+            <div class="row" id="tableText">
+                <div class="col">
+                    Train Name
+                </div>
+                <div class="col">
+                    Destination
+                </div>
+                <div class="col">
+                    First Train Time
+                </div>
+                <div class="col">
+                    Frequency (min)
+                </div>
+                <div class="col">
+                   Next Arrival           
+                </div>
+                <div class="col">
+                    Minutes Away
+                </div>
+            </div>
+
+            <hr width="100%">
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="trainName" aria-describedby="name">
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination">
+            </div>
+            <div class="form-group">
+                <label for="firstTime">First Train Time (HH:mm PM/AM) </label>
+                <input type="time" class="form-control" id="firstTime" >
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency (min)</label>
+                <input type="number" class="form-control" id="frequency">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+        </form>
+    </div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
